@@ -1,0 +1,12 @@
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+docs = [
+    "I like machine learning",
+    "I like Python programming",
+    "Python is useful"
+]
+
+vectorizer = TfidfVectorizer()
+matrix = vectorizer.fit_transform(docs)
+
+print(matrix.toarray())
